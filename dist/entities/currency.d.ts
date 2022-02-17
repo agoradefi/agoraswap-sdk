@@ -34,5 +34,6 @@ export declare class Currency {
 declare const ETHER: Currency;
 declare const HARMONY: Currency;
 declare const BINANCE_COIN: Currency;
+declare const METIS: Currency;
 declare const DEFAULT_CURRENCIES: Currency[];
-export { ETHER, HARMONY, BINANCE_COIN, DEFAULT_CURRENCIES };
+export { ETHER, HARMONY, BINANCE_COIN, METIS, DEFAULT_CURRENCIES };

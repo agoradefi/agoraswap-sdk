@@ -399,7 +399,8 @@ Currency.METIS = /*#__PURE__*/new Currency(18, 'METIS', 'Metis Token');
 var ETHER = Currency.ETHER;
 var HARMONY = Currency.HARMONY;
 var BINANCE_COIN = Currency.BINANCE_COIN;
-var DEFAULT_CURRENCIES = [ETHER, HARMONY, BINANCE_COIN];
+var METIS = Currency.METIS;
+var DEFAULT_CURRENCIES = [ETHER, HARMONY, BINANCE_COIN, METIS];
 
 var _WETH;
 /**
@@ -1595,5 +1596,5 @@ var Fetcher = /*#__PURE__*/function () {
   return Fetcher;
 }();
 
-export { BINANCE_COIN, Blockchain, ChainId, Currency, CurrencyAmount, DEFAULT_CURRENCIES, ETHER, FACTORY_ADDRESSES, Fetcher, Fraction, HARMONY, INIT_CODE_HASH, InsufficientInputAmountError, InsufficientReservesError, MINIMUM_LIQUIDITY, Pair, Percent, Price, Rounding, Route, Router, Token, TokenAmount, Trade, TradeType, WETH, currencyEquals, inputOutputComparator, tradeComparator };
+export { BINANCE_COIN, Blockchain, ChainId, Currency, CurrencyAmount, DEFAULT_CURRENCIES, ETHER, FACTORY_ADDRESSES, Fetcher, Fraction, HARMONY, INIT_CODE_HASH, InsufficientInputAmountError, InsufficientReservesError, METIS, MINIMUM_LIQUIDITY, Pair, Percent, Price, Rounding, Route, Router, Token, TokenAmount, Trade, TradeType, WETH, currencyEquals, inputOutputComparator, tradeComparator };
 //# sourceMappingURL=sdk.esm.js.map

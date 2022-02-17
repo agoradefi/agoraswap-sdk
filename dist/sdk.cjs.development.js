@@ -397,7 +397,8 @@ Currency.METIS = /*#__PURE__*/new Currency(18, 'METIS', 'Metis Token');
 var ETHER = Currency.ETHER;
 var HARMONY = Currency.HARMONY;
 var BINANCE_COIN = Currency.BINANCE_COIN;
-var DEFAULT_CURRENCIES = [ETHER, HARMONY, BINANCE_COIN];
+var METIS = Currency.METIS;
+var DEFAULT_CURRENCIES = [ETHER, HARMONY, BINANCE_COIN, METIS];
 
 var _WETH;
 /**
@@ -1606,6 +1607,7 @@ exports.HARMONY = HARMONY;
 exports.INIT_CODE_HASH = INIT_CODE_HASH;
 exports.InsufficientInputAmountError = InsufficientInputAmountError;
 exports.InsufficientReservesError = InsufficientReservesError;
+exports.METIS = METIS;
 exports.MINIMUM_LIQUIDITY = MINIMUM_LIQUIDITY;
 exports.Pair = Pair;
 exports.Percent = Percent;
