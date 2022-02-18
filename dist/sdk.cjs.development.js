@@ -20,7 +20,10 @@ var IUniswapV2Pair = _interopDefault(require('@venomswap/core/build/IUniswapV2Pa
 var _FACTORY_ADDRESSES, _SOLIDITY_TYPE_MAXIMA;
 
 (function (Blockchain) {
-  Blockchain[Blockchain["METIS_CHAIN"] = 1] = "METIS_CHAIN";
+  Blockchain[Blockchain["ETHEREUM"] = 1] = "ETHEREUM";
+  Blockchain[Blockchain["BINANCE_SMART_CHAIN"] = 2] = "BINANCE_SMART_CHAIN";
+  Blockchain[Blockchain["HARMONY"] = 3] = "HARMONY";
+  Blockchain[Blockchain["METIS"] = 4] = "METIS";
 })(exports.Blockchain || (exports.Blockchain = {}));
 
 (function (ChainId) {

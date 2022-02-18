@@ -4,7 +4,10 @@ import JSBI from 'jsbi'
 export type BigintIsh = JSBI | bigint | string
 
 export enum Blockchain {
-  METIS_CHAIN = 1,
+  ETHEREUM = 1,
+  BINANCE_SMART_CHAIN = 2,
+  HARMONY = 3,
+  METIS = 4
 }
 
 export enum ChainId {
