@@ -122,7 +122,7 @@ export const WETH = {
   ),
   [ChainId.METIS]: new Token(
     ChainId.METIS,
-    '0x0000000000000000000000000000000000000000',
+    '0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000',
     18,
     'METIS',
     'Metis Token'

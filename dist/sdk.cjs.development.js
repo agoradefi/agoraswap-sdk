@@ -466,7 +466,7 @@ function currencyEquals(currencyA, currencyB) {
     return currencyA === currencyB;
   }
 }
-var WETH = (_WETH = {}, _WETH[exports.ChainId.MAINNET] = /*#__PURE__*/new Token(exports.ChainId.MAINNET, '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', 18, 'WETH', 'Wrapped Ether'), _WETH[exports.ChainId.ROPSTEN] = /*#__PURE__*/new Token(exports.ChainId.ROPSTEN, '0xc778417E063141139Fce010982780140Aa0cD5Ab', 18, 'WETH', 'Wrapped Ether'), _WETH[exports.ChainId.RINKEBY] = /*#__PURE__*/new Token(exports.ChainId.RINKEBY, '0xc778417E063141139Fce010982780140Aa0cD5Ab', 18, 'WETH', 'Wrapped Ether'), _WETH[exports.ChainId.GÖRLI] = /*#__PURE__*/new Token(exports.ChainId.GÖRLI, '0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6', 18, 'WETH', 'Wrapped Ether'), _WETH[exports.ChainId.KOVAN] = /*#__PURE__*/new Token(exports.ChainId.KOVAN, '0xd0A1E359811322d97991E03f863a0C30C2cF029C', 18, 'WETH', 'Wrapped Ether'), _WETH[exports.ChainId.BSC_MAINNET] = /*#__PURE__*/new Token(exports.ChainId.BSC_MAINNET, '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c', 18, 'WBNB', 'Wrapped BNB'), _WETH[exports.ChainId.BSC_TESTNET] = /*#__PURE__*/new Token(exports.ChainId.BSC_TESTNET, '0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd', 18, 'WBNB', 'Wrapped BNB'), _WETH[exports.ChainId.HARMONY_MAINNET] = /*#__PURE__*/new Token(exports.ChainId.HARMONY_MAINNET, '0xcF664087a5bB0237a0BAd6742852ec6c8d69A27a', 18, 'WONE', 'Wrapped ONE'), _WETH[exports.ChainId.HARMONY_TESTNET] = /*#__PURE__*/new Token(exports.ChainId.HARMONY_TESTNET, '0x7466d7d0C21Fa05F32F5a0Fa27e12bdC06348Ce2', 18, 'WONE', 'Wrapped ONE'), _WETH[exports.ChainId.METIS] = /*#__PURE__*/new Token(exports.ChainId.METIS, '0x0000000000000000000000000000000000000000', 18, 'METIS', 'Metis Token'), _WETH);
+var WETH = (_WETH = {}, _WETH[exports.ChainId.MAINNET] = /*#__PURE__*/new Token(exports.ChainId.MAINNET, '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', 18, 'WETH', 'Wrapped Ether'), _WETH[exports.ChainId.ROPSTEN] = /*#__PURE__*/new Token(exports.ChainId.ROPSTEN, '0xc778417E063141139Fce010982780140Aa0cD5Ab', 18, 'WETH', 'Wrapped Ether'), _WETH[exports.ChainId.RINKEBY] = /*#__PURE__*/new Token(exports.ChainId.RINKEBY, '0xc778417E063141139Fce010982780140Aa0cD5Ab', 18, 'WETH', 'Wrapped Ether'), _WETH[exports.ChainId.GÖRLI] = /*#__PURE__*/new Token(exports.ChainId.GÖRLI, '0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6', 18, 'WETH', 'Wrapped Ether'), _WETH[exports.ChainId.KOVAN] = /*#__PURE__*/new Token(exports.ChainId.KOVAN, '0xd0A1E359811322d97991E03f863a0C30C2cF029C', 18, 'WETH', 'Wrapped Ether'), _WETH[exports.ChainId.BSC_MAINNET] = /*#__PURE__*/new Token(exports.ChainId.BSC_MAINNET, '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c', 18, 'WBNB', 'Wrapped BNB'), _WETH[exports.ChainId.BSC_TESTNET] = /*#__PURE__*/new Token(exports.ChainId.BSC_TESTNET, '0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd', 18, 'WBNB', 'Wrapped BNB'), _WETH[exports.ChainId.HARMONY_MAINNET] = /*#__PURE__*/new Token(exports.ChainId.HARMONY_MAINNET, '0xcF664087a5bB0237a0BAd6742852ec6c8d69A27a', 18, 'WONE', 'Wrapped ONE'), _WETH[exports.ChainId.HARMONY_TESTNET] = /*#__PURE__*/new Token(exports.ChainId.HARMONY_TESTNET, '0x7466d7d0C21Fa05F32F5a0Fa27e12bdC06348Ce2', 18, 'WONE', 'Wrapped ONE'), _WETH[exports.ChainId.METIS] = /*#__PURE__*/new Token(exports.ChainId.METIS, '0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000', 18, 'METIS', 'Metis Token'), _WETH);
 
 var _toSignificantRoundin, _toFixedRounding;
 var Decimal = /*#__PURE__*/toFormat(_Decimal);
@@ -1435,44 +1435,41 @@ var Router = /*#__PURE__*/function () {
 
     switch (trade.tradeType) {
       case exports.TradeType.EXACT_INPUT:
-        if (etherIn) {
-          methodName = useFeeOnTransfer ? 'swapExactETHForTokensSupportingFeeOnTransferTokens' : 'swapExactETHForTokens'; // (uint amountOutMin, address[] calldata path, address to, uint deadline)
+        // if (etherIn) {
+        //   methodName = useFeeOnTransfer ? 'swapExactETHForTokensSupportingFeeOnTransferTokens' : 'swapExactETHForTokens'
+        //   // (uint amountOutMin, address[] calldata path, address to, uint deadline)
+        //   args = [amountOut, path, to, deadline]
+        //   value = amountIn
+        // } else if (etherOut) {
+        //   methodName = useFeeOnTransfer ? 'swapExactTokensForETHSupportingFeeOnTransferTokens' : 'swapExactTokensForETH'
+        //   // (uint amountIn, uint amountOutMin, address[] calldata path, address to, uint deadline)
+        //   args = [amountIn, amountOut, path, to, deadline]
+        //   value = ZERO_HEX
+        // } else {
+        methodName = useFeeOnTransfer ? 'swapExactTokensForTokensSupportingFeeOnTransferTokens' : 'swapExactTokensForTokens'; // (uint amountIn, uint amountOutMin, address[] calldata path, address to, uint deadline)
 
-          args = [amountOut, path, to, deadline];
-          value = amountIn;
-        } else if (etherOut) {
-          methodName = useFeeOnTransfer ? 'swapExactTokensForETHSupportingFeeOnTransferTokens' : 'swapExactTokensForETH'; // (uint amountIn, uint amountOutMin, address[] calldata path, address to, uint deadline)
-
-          args = [amountIn, amountOut, path, to, deadline];
-          value = ZERO_HEX;
-        } else {
-          methodName = useFeeOnTransfer ? 'swapExactTokensForTokensSupportingFeeOnTransferTokens' : 'swapExactTokensForTokens'; // (uint amountIn, uint amountOutMin, address[] calldata path, address to, uint deadline)
-
-          args = [amountIn, amountOut, path, to, deadline];
-          value = ZERO_HEX;
-        }
+        args = [amountIn, amountOut, path, to, deadline];
+        value = ZERO_HEX; // }
 
         break;
 
       case exports.TradeType.EXACT_OUTPUT:
-        !!useFeeOnTransfer ?  invariant(false, 'EXACT_OUT_FOT')  : void 0;
+        !!useFeeOnTransfer ?  invariant(false, 'EXACT_OUT_FOT')  : void 0; // if (etherIn) {
+        //   methodName = 'swapETHForExactTokens'
+        //   // (uint amountOut, address[] calldata path, address to, uint deadline)
+        //   args = [amountOut, path, to, deadline]
+        //   value = amountIn
+        // } else if (etherOut) {
+        //   methodName = 'swapTokensForExactETH'
+        //   // (uint amountOut, uint amountInMax, address[] calldata path, address to, uint deadline)
+        //   args = [amountOut, amountIn, path, to, deadline]
+        //   value = ZERO_HEX
+        // } else {
 
-        if (etherIn) {
-          methodName = 'swapETHForExactTokens'; // (uint amountOut, address[] calldata path, address to, uint deadline)
+        methodName = 'swapTokensForExactTokens'; // (uint amountOut, uint amountInMax, address[] calldata path, address to, uint deadline)
 
-          args = [amountOut, path, to, deadline];
-          value = amountIn;
-        } else if (etherOut) {
-          methodName = 'swapTokensForExactETH'; // (uint amountOut, uint amountInMax, address[] calldata path, address to, uint deadline)
-
-          args = [amountOut, amountIn, path, to, deadline];
-          value = ZERO_HEX;
-        } else {
-          methodName = 'swapTokensForExactTokens'; // (uint amountOut, uint amountInMax, address[] calldata path, address to, uint deadline)
-
-          args = [amountOut, amountIn, path, to, deadline];
-          value = ZERO_HEX;
-        }
+        args = [amountOut, amountIn, path, to, deadline];
+        value = ZERO_HEX; // }
 
         break;
     }
