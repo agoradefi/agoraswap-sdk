@@ -30,7 +30,7 @@ export declare enum Rounding {
 export declare const FACTORY_ADDRESSES: {
     [chainId in ChainId]: string;
 };
-export declare const INIT_CODE_HASH = "0x2db04eb0229e4d90b494802bf60a36285244467625de3912d85ab8f815526d5b";
+export declare const INIT_CODE_HASH = "0x7ced2be6939d15dfad3aaa6b6a6c3c770295d06bf6c943fcb415c1808ccb108c";
 export declare const MINIMUM_LIQUIDITY: JSBI;
 export declare const ZERO: JSBI;
 export declare const ONE: JSBI;
